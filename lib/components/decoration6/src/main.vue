@@ -1,10 +1,8 @@
 <template>
   <div class="dv-decoration-6" :ref="ref">
     <svg :width="`${svgWH[0]}px`" :height="`${svgWH[1]}px`" :style="`transform:scale(${svgScale[0]},${svgScale[1]});`">
-      <template
-        v-for="(point, i) in points"
-      >
         <rect
+          v-for="(point, i) in points"
           :key="i"
           :fill="mergedColor[Math.random() > 0.5 ? 0 : 1]"
           :x="point[0] - halfRectWidth"
@@ -33,7 +31,6 @@
             repeatCount="indefinite"
           />
         </rect>
-      </template>
     </svg>
   </div>
 </template>
